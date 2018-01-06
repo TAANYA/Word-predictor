@@ -3,7 +3,11 @@ import heapq
 import operator
 import re
 from threading import Thread
+<<<<<<< HEAD
 from tkinter import *
+=======
+from Tkinter import *
+>>>>>>> f3a31aa268ceba39121c3c0d7bc6ebc83c3ff43a
 import r
            
 class Extract():
@@ -344,14 +348,28 @@ dictionary ={}
 
 def store ():
     var1 = entry1.get()
+<<<<<<< HEAD
     print(var1)
     y = Char(var1)
     tst.predict(dictionary,y)
+=======
+    if var1 is '':
+        print('no word entered')
+        return
+    print(var1)
+    y = Char(var1)
+    tst.predict(dictionary,y)
+    #print(dictionary)
+>>>>>>> f3a31aa268ceba39121c3c0d7bc6ebc83c3ff43a
     sorted_x = sorted(dictionary.items(), key=operator.itemgetter(-1))
     #print(sorted_x)
     a1_sorted_keys = sorted(dictionary, key=dictionary.get, reverse=True)
     for r in a1_sorted_keys:
         tst.list.append(r)
+<<<<<<< HEAD
+=======
+        #print(dictionary[r])
+>>>>>>> f3a31aa268ceba39121c3c0d7bc6ebc83c3ff43a
     findPredictedWords(tst)
     del tst.list[:]
  
